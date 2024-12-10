@@ -8,6 +8,7 @@ namespace HideInput
 {
     internal class Program
     {
+        private const string CON_COMMON = "COMMON";
         private const string CON_SQLPLUS = "SQLPLUS";
         private const string CON_EXPDP = "EXPDP";
 
@@ -18,6 +19,9 @@ namespace HideInput
             if (args.Length > 0)
             {
                 strFlg = args[0];
+            } else
+            {
+                strFlg = CON_COMMON;
             }
 
             StringBuilder input = new StringBuilder();
